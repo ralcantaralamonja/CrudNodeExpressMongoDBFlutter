@@ -1,7 +1,7 @@
-const mongoose = requiere('mongoose');
+const mongoose = require('mongoose');
 
-mongoose.connection('mongodb://localhost:27017/SSAYS',{
-    useNewUrlPaerser:true,
+mongoose.connect('mongodb+srv://ricardo:ricardo@crudcluster.s51cgaj.mongodb.net/SSAYS?retryWrites=true&w=majority',{
+    useNewUrlParser:true,
     useUnifiedTopology:true,
-    useCreateIndex:true
+    
 }).then(db => console.log('Connection successfully'));

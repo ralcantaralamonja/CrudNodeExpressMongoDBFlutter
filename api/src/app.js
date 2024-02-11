@@ -1,8 +1,9 @@
-const express = requiere('express');
+const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
 
-app.use(express.json());
-app.use(express.urlencod({extends:false}));
-app.use(requiere('./controllers/authControllers'));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+//app.use(require('./controllers/authControllers'));
 
 module.exports = app;

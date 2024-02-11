@@ -1,5 +1,7 @@
-const app = requiere('./app');
-requiere('./connection');
+
+const app = require('./app');
+
+require('./connection');
 
 const init = async () => {
     await app.listen(3000);
