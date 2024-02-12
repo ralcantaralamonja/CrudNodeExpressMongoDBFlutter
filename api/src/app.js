@@ -4,6 +4,6 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-//app.use(require('./controllers/authControllers'));
+app.use(require('./controllers/authControllers'));
 
 module.exports = app;
